@@ -16,7 +16,7 @@ namespace Snake
             int y2 = 5;
             char sym2 = '#';
 
-            Drow(x2,y2,sym2);
+            Drow(x2, y2, sym2);
 
             Console.ReadLine();
         }
