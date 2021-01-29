@@ -18,7 +18,6 @@ namespace Snake
             numList.Add(1);
             numList.Add(2);
 
-
             int x = numList[0];
             int y = numList[1];
             int z = numList[2];
@@ -27,6 +26,10 @@ namespace Snake
             {
                 Console.WriteLine(i);
             }
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
 
             Console.ReadLine();
         }
