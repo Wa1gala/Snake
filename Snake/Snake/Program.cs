@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.IO;
 
 namespace Snake
 {
@@ -7,47 +9,23 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(3, 5, '#');
-            p1.Drow();
+            Console.SetWindowSize(80,25);
+            Console.SetBufferSize(80,25);
 
-            Point p2 = new Point(6, 8, '*');
+            //Рамка
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
+            upLine.Drow();
+            downLine.Drow();
+            leftLine.Drow();
+            rightLine.Drow();
+
+            //Точки
+            Point p2 = new Point(4, 5, '*');
             p2.Drow();
-
-            Point p3 = new Point(9, 4, '&');
-            p3.Drow();
-
-            Point p4 = new Point(11, 5, '`');
-            p4.Drow();
-
-            List<int> numList = new List<int>();
-            numList.Add(0);
-            numList.Add(1);
-            numList.Add(2);
-
-            int x = numList[0];
-            int y = numList[1];
-            int z = numList[2];
-
-            foreach (int i in numList )
-            {
-                Console.WriteLine(i);
-            }
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-
-            List<char> charList = new List<char>();
-            charList.Add('~');
-            charList.Add('@');
-
-            foreach(char i in charList)
-            {
-                Console.WriteLine(i);
-            }
-
-            charList.RemoveAt(1);
-    
+           
             Console.ReadLine();
         }
     }
